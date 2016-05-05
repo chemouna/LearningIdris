@@ -1,0 +1,8 @@
+package learningidris
+
+-- LearningIdris
+-- by Cheikhna Mouna
+
+opts = ""
+sourcedir = src
+modules = Learningidris
