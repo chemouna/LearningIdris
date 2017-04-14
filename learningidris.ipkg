@@ -6,3 +6,7 @@ package learningidris
 opts = ""
 sourcedir = src
 modules = Learningidris
+
+pkgs = test
+
+

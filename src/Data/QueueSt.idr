@@ -1,4 +1,4 @@
-module queuetwostacks
+module Data.QueueSt
 
 %access export
 %default total
@@ -19,5 +19,6 @@ pushQ : a -> Queue a -> Queue a
 pushQ e (MkQ inq outq) = MkQ (e::inq) outq
 
 pushQMany : List a -> Queue a -> Queue a
-pushQMany [] q = q
-pushQMany (x::xs) (MkQ inq outq) = pushQMany xs (MkQ (x::inq) outq)
+-- pushQMany [] q = q
+-- pushQMany (x::xs) (MkQ inq outq) = pushQMany xs (MkQ (x::inq) outq)
+pushQMany xs q = foldl (flip pushQ) q xs
