@@ -9,4 +9,7 @@ modules = Learningidris
 
 pkgs = test
 
-tests = Data.Test.QueueSt.runTest
+modules = Data.QueueSt
+        , Data.Test.QueueSt
+
+ tests = Data.Test.QueueSt.runTest
