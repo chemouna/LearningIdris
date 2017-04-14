@@ -33,3 +33,7 @@ popQ (MkQ Nil (y :: ys)) = (y, MkQ Nil ys)
 popQ (MkQ (x:xs) [y]) = (y, MkQ Nil (reverse (x:xs))
 popQ (MkQ (x :: xs)(y :: ys)) = (y, MkQ (x :: xs) ys)
 popQ (MkQ Nil (x :: (y :: ys))) = (x, MkQ Nil (y :: ys))
+
+partial
+peekQ :: (q : Queue ty) -> {auto prf : isQCons q = True} -> ty
+peekQ q = fst $ popQ q
