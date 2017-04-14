@@ -1,8 +1,9 @@
 module Data.Test.Queue
 
-%access export
-
 import Data.QueueSt
+import Test.Generic
+
+%access export
 
 covering
 test2 : IO Bool
